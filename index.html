@@ -3,10 +3,10 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>WOOP Iron Deficiency Test</title>
+    <title>WOOP Lucky Draw</title>
     <meta
       name="description"
-      content="Take the Iron Deficiency Test and stand a chance to win rewards worth ₹12,500 from WOOP."
+      content="Complete a quick health check for your child and stand a chance to win ₹12,500 from WOOP."
     />
     <link rel="stylesheet" href="styles.css" />
   </head>
@@ -17,66 +17,53 @@
           <img class="woop-logo" src="assets/woop-logo.png" alt="WOOP" />
           <!-- <img
             class="partner-logo"
-            src="assets/danone-logo.png"
+            src="assets/danone-partner-logo.png"
             alt="In partnership with Danone"
           /> -->
         </div>
 
         <div class="hero-grid shell">
+          <div class="hero-copy">
+            <div class="reward-kicker">
+              <img src="assets/gift.svg" alt="" />
+              <span>Lucky Draw Alert!</span>
+            </div>
+
+            <p class="eyebrow">STAND A CHANCE TO WIN</p>
+            <h1><span>₹12,500</span><br />from WOOP!</h1>
+
+            <div class="draw-message">
+              <img src="assets/gift.svg" alt="" />
+              <p>
+                Complete a quick health check for your child and get a chance to
+                enter the <strong>WOOP Lucky Draw!</strong>
+              </p>
+            </div>
+
+            <a class="cta" href="#client-link" data-client-link
+              >Take the test &amp; enter the Lucky Draw <span>›</span></a
+            >
+            <div class="time-note">
+              <img src="assets/clock.svg" alt="" /> Takes less than 5 minutes
+            </div>
+          </div>
+
           <div class="hero-visual">
+            <div class="confetti confetti-1">✦</div>
+            <div class="confetti confetti-2">◆</div>
+            <div class="confetti confetti-3">✦</div>
+            <div class="confetti confetti-4">●</div>
             <img
               class="family"
               src="assets/family-hero.jpg"
               alt="Family smiling together"
             />
-            <div class="protect-badge">
-              <span class="shield-icon">
-                <svg
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    d="M12 2.5l7.5 2.7v5.6c0 5-3.2 8.6-7.5 10.2C7.7 19.4 4.5 15.8 4.5 10.8V5.2L12 2.5z"
-                    fill="#E31868"
-                  />
-                  <path
-                    d="M8.7 12.2l2.2 2.2 4-4.7"
-                    stroke="#fff"
-                    stroke-width="1.6"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    fill="none"
-                  />
-                </svg>
-              </span>
-              <span class="badge-text"
-                ><strong>Protect your child</strong
-                ><span>from infections*</span></span
-              >
-            </div>
-          </div>
-
-          <div class="hero-copy">
-            <div class="reward-kicker">
+            <div class="win-card">
               <img src="assets/gift.svg" alt="" />
-              <span>Stand a chance to win</span>
-            </div>
-
-            <h1><span>₹12,500</span><br />from WOOP!</h1>
-            <h2>
-              A small test today<br />for a <strong>stronger tomorrow!</strong>
-            </h2>
-            <p>
-              Take the <strong>Iron Deficiency Test</strong> and help your child
-              grow healthier.
-            </p>
-
-            <a class="cta" href="#client-link" data-client-link
-              >Take the test now! <span>›</span></a
-            >
-            <div class="time-note">
-              <img src="assets/clock.svg" alt="" /> Takes less than 5 minutes
+              <div>
+                <strong>WIN ₹12,500</strong>
+                <span>with WOOP Lucky Draw!</span>
+              </div>
             </div>
           </div>
         </div>
@@ -108,7 +95,7 @@
         <div class="why-card">
           <img class="child-art" src="assets/child-checklist.svg" alt="" />
           <div>
-            <h3>Why check for iron deficiency?</h3>
+            <h3>Why check your child’s iron health?</h3>
             <p>
               Iron deficiency is common among children in India and can impact
               their growth, immunity and overall well-being.
@@ -130,7 +117,7 @@
         </div>
 
         <a class="cta cta-bottom" href="#client-link" data-client-link
-          >Take the test now! <span>›</span></a
+          >Take the test &amp; enter the Lucky Draw <span>›</span></a
         >
         <div class="time-note">
           <img src="assets/clock.svg" alt="" /> Takes less than 5 minutes
@@ -142,8 +129,8 @@
           <img src="assets/gift.svg" alt="" />
           <div>
             <p>
-              <strong>Complete the Iron Deficiency Test</strong> and you’ll be
-              entered into the WOOP Lucky Draw! ✨
+              <strong>Complete the health check</strong> and get a chance to
+              enter the <strong>WOOP Lucky Draw</strong> and win ₹12,500! ✨
             </p>
             <small
               >**Any applicable reward will be issued directly by WOOP. Client
@@ -156,7 +143,7 @@
 
     <script>
       // Replace this with the client destination.
-      const CLIENT_URL = "https://example.com";
+      const CLIENT_URL = "https://www.danone.in/iron-strong/";
       document.querySelectorAll("[data-client-link]").forEach((link) => {
         link.href = CLIENT_URL;
       });
