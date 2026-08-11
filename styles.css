@@ -30,7 +30,7 @@ img{max-width:100%;display:block}
 .partner-logo{width:250px;height:auto}
 
 .hero-grid{display:grid;grid-template-columns:1.02fr .98fr;align-items:end;gap:20px;padding:24px 0 42px}
-.hero-copy{padding:20px 0 12px;z-index:2}
+.hero-copy{grid-column:1;grid-row:1;padding:20px 0 12px;z-index:2}
 .reward-kicker{display:inline-flex;align-items:center;gap:10px;background:var(--pink);color:#fff;border-radius:999px;padding:7px 16px 7px 8px;text-transform:uppercase;font-weight:800;letter-spacing:.02em}
 .reward-kicker img{width:46px;margin-left:-4px}
 h1{font-size:clamp(54px,7vw,92px);line-height:.92;letter-spacing:-.045em;margin:22px 0 24px;color:var(--purple);font-weight:800}
@@ -50,12 +50,21 @@ h1 span{color:var(--pink)}
 .cta:hover{filter:brightness(.97);transform:translateY(-1px)}
 .time-note{display:flex;align-items:center;justify-content:center;gap:9px;width:min(100%,560px);font-size:17px;margin-top:12px}
 .time-note img{width:25px;height:25px}
-.hero-visual{position:relative;min-height:520px;display:flex;align-items:flex-end;justify-content:flex-end}
+.hero-visual{grid-column:2;grid-row:1;position:relative;min-height:520px;display:flex;align-items:flex-end;justify-content:flex-end}
 .family{width:100%;height:520px;object-fit:cover;object-position:center;border-radius:36px 36px 0 0;mask-image:linear-gradient(to bottom,#000 75%,transparent 100%)}
-.protect-badge{position:absolute;right:2%;bottom:4%;width:min(54%,285px);border-radius:18px;box-shadow:0 12px 24px rgba(0,0,0,.14)}
+.protect-badge{
+  position:absolute;right:2%;bottom:4%;width:max-content;max-width:80%;
+  display:flex;align-items:center;gap:12px;
+  background:#fff;border-radius:18px;padding:14px 18px;
+  box-shadow:0 12px 24px rgba(0,0,0,.14)
+}
+.shield-icon{flex:none;width:38px;height:38px}
+.shield-icon svg{width:100%;height:100%;display:block}
+.badge-text{display:flex;flex-direction:column;font-size:16px;line-height:1.35;color:var(--ink);white-space:nowrap}
+.badge-text strong{font-weight:800}
 
 .benefits{padding:36px 0 26px}
-.benefits h3,.why h3{color:var(--purple);text-align:center;font-size:clamp(26px,3vw,40px);margin:0 0 28px}
+.benefits h3,.why h3{color:var(--purple);text-align:center;font-size:clamp(26px,3vw,40px);margin:0 0 28px;text-wrap:balance}
 .benefits h3 span{color:var(--pink)}
 .benefit-grid{display:grid;grid-template-columns:repeat(4,1fr)}
 .benefit-grid article{text-align:center;padding:8px 20px;border-right:1px solid var(--line)}
@@ -93,20 +102,20 @@ li img{width:24px}
   .brand-row{padding-top:16px}
   .woop-logo{width:104px}
   .partner-logo{width:190px}
-  .hero-grid{display:flex;flex-direction:column;padding-top:10px;gap:0}
-  .hero-copy{width:100%;padding-top:10px}
-  .reward-kicker{font-size:14px;padding-right:12px}
-  .reward-kicker img{width:40px}
-  h1{font-size:62px;margin:18px 0}
-  .hero-copy h2{font-size:36px;max-width:400px}
-  .hero-copy>p{font-size:20px;max-width:460px}
-  .hero-visual{order:-1;min-height:0;width:54%;align-self:flex-end;margin-bottom:-250px;pointer-events:none}
-  .family{height:390px;border-radius:26px 26px 0 0;object-position:54% center}
-  .protect-badge{width:220px;bottom:2%;right:-4px}
-  .hero-copy{position:relative}
-  .hero-copy .reward-kicker,.hero-copy h1,.hero-copy h2,.hero-copy>p{max-width:56%}
-  .cta{margin-top:12px;max-width:100%;min-height:62px;font-size:20px}
-  .time-note{font-size:15px}
+  .hero-grid{display:flow-root;padding-top:10px}
+  .hero-visual{display:block;float:right;width:42%;max-width:230px;min-height:0;margin:2px 0 16px 10px;position:relative}
+  .family{width:100%;height:auto;aspect-ratio:3/4;object-fit:cover;border-radius:20px;mask-image:none}
+  .protect-badge{right:0;bottom:-14px;width:max-content;max-width:none;gap:8px;padding:9px 12px;border-radius:12px;box-shadow:0 8px 16px rgba(0,0,0,.14)}
+  .shield-icon{width:26px;height:26px}
+  .badge-text{font-size:11px;line-height:1.3}
+  .hero-copy{width:auto;padding-top:10px}
+  .reward-kicker{font-size:10px;padding:5px 9px 5px 5px;gap:5px;max-width:150px}
+  .reward-kicker img{width:22px;margin-left:-2px}
+  h1{font-size:36px;margin:14px 0;line-height:.95}
+  .hero-copy h2{font-size:26px;margin-bottom:14px}
+  .hero-copy>p{font-size:17px;line-height:1.4;margin-bottom:20px}
+  .cta{clear:both;margin-top:12px;width:100%;max-width:100%;min-height:62px;font-size:20px}
+  .time-note{clear:both;width:100%;font-size:15px}
   .benefits{padding-top:28px}
   .benefits h3{font-size:27px}
   .benefit-grid{grid-template-columns:repeat(2,1fr);gap:16px 0}
@@ -125,15 +134,15 @@ li img{width:24px}
   .woop-logo{width:88px}
   .partner-logo{width:160px}
   .hero-grid{padding-bottom:26px}
-  .hero-visual{width:58%;margin-bottom:-224px}
-  .family{height:330px}
-  .protect-badge{width:170px}
-  .hero-copy .reward-kicker,.hero-copy h1,.hero-copy h2,.hero-copy>p{max-width:58%}
+  .hero-visual{width:48%;max-width:210px;margin-left:12px}
+  .protect-badge{padding:7px 10px;gap:6px}
+  .shield-icon{width:22px;height:22px}
+  .badge-text{font-size:9.5px}
   .reward-kicker{font-size:11px;gap:4px}
   .reward-kicker img{width:33px}
-  h1{font-size:50px}
-  .hero-copy h2{font-size:29px}
-  .hero-copy>p{font-size:17px;line-height:1.35}
+  h1{font-size:38px}
+  .hero-copy h2{font-size:22px}
+  .hero-copy>p{font-size:15px;line-height:1.35;margin-bottom:16px}
   .cta{min-height:58px;font-size:18px}
   .benefit-grid img{width:56px;height:56px}
   .legal-inner{grid-template-columns:46px 1fr;padding:20px 18px}
