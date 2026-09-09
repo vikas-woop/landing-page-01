@@ -63,6 +63,7 @@ h1{
   font-weight:850;
 }
 h1 span{color:var(--pink)}
+h1 small{display:block;font-size:.42em;color:var(--purple);font-weight:800;letter-spacing:-.02em;margin-top:4px}
 .draw-message{
   display:flex;align-items:center;gap:16px;
   background:#fff0cf;border:1px solid #f5ddb0;
@@ -105,6 +106,7 @@ h1 span{color:var(--pink)}
   position:absolute;
   right:-2%;
   bottom:5%;
+  z-index:3;
   display:flex;align-items:center;gap:14px;
   background:#fff;
   border-radius:22px;
@@ -120,7 +122,7 @@ h1 span{color:var(--pink)}
 .confetti-1{top:8%;right:5%;color:#f3bd36}
 .confetti-2{top:20%;left:2%;color:#e31868}
 .confetti-3{bottom:23%;left:6%;color:#f3bd36}
-.confetti-4{bottom:8%;right:10%;color:#e31868}
+.confetti-4{bottom:4%;left:-4%;color:#e31868}
 
 .benefits{padding:38px 0 28px}
 .benefits h3,.why h3{color:var(--purple);text-align:center;font-size:clamp(26px,3vw,40px);margin:0 0 28px;text-wrap:balance}
