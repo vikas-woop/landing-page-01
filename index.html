@@ -9,6 +9,24 @@
       content="Complete a quick health check for your child and stand a chance to win a reward worth ₹12,500 from WOOP."
     />
     <link rel="stylesheet" href="styles.css" />
+
+    <!-- Meta Pixel Code -->
+    <script>
+    !function(f,b,e,v,n,t,s)
+    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+    n.queue=[];t=b.createElement(e);t.async=!0;
+    t.src=v;s=b.getElementsByTagName(e)[0];
+    s.parentNode.insertBefore(t,s)}(window, document,'script',
+    'https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', '1404129047906813');
+    fbq('track', 'PageView');
+    </script>
+    <noscript><img height="1" width="1" style="display:none"
+    src="https://www.facebook.com/tr?id=1404129047906813&ev=PageView&noscript=1"
+    /></noscript>
+    <!-- End Meta Pixel Code -->
   </head>
   <body>
     <main>
@@ -40,7 +58,7 @@
               </p>
             </div>
 
-            <a class="cta" href="#client-link" data-client-link
+            <a class="cta" href="#client-link" data-client-link data-pixel-label="Take the test & enter the Lucky Draw"
               >Take the test &amp; enter the Lucky Draw <span>›</span></a
             >
             <div class="time-note">
@@ -116,7 +134,7 @@
           </div>
         </div>
 
-        <a class="cta cta-bottom" href="#client-link" data-client-link
+        <a class="cta cta-bottom" href="#client-link" data-client-link data-pixel-label="Take the test & enter the Lucky Draw"
           >Take the test &amp; enter the Lucky Draw <span>›</span></a
         >
         <div class="time-note">
@@ -147,6 +165,13 @@
       const CLIENT_URL = "https://win.woopworldapp.com/-O64";
       document.querySelectorAll("[data-client-link]").forEach((link) => {
         link.href = CLIENT_URL;
+        link.addEventListener("click", () => {
+          if (typeof fbq === "function") {
+            fbq("trackCustom", "HealthCheckCTAClick", {
+              cta_label: link.getAttribute("data-pixel-label"),
+            });
+          }
+        });
       });
     </script>
   </body>
